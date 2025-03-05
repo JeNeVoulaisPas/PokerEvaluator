@@ -2,29 +2,24 @@
 // Created by paulo on 17/02/2025.
 //
 
-#include "Deck.h"
 #include <algorithm>
-#include <random>
-
 #include "Deck.h"
-#include <algorithm>
-#include <random>
+#include "MT.h"
 
 Deck::Deck() {
-    std::string ranks = "23456789TJQKA";
-    std::string suits = "hdcs";
-    for (char suit : suits) {
-        for (char rank : ranks) {
-            cards.emplace_back(std::string(1, rank), std::string(1, suit));
+    for (int r = TWO; r <= ACE; r++) {
+        for (int s = HEARTS; s <= SPADES; s++) {
+            cards.push_back({ static_cast<Rank>(r), static_cast<Suit>(s) });
         }
     }
-    shuffle();
 }
 
 void Deck::shuffle() {
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(cards.begin(), cards.end(), g);
+    // Mélange du deck avec le générateur de nombres aléatoires
+    for (size_t i = cards.size() - 1; i > 0; i--) {
+        size_t j = genrand_int32() % (i + 1);
+        std::swap(cards[i], cards[j]);
+    }
 }
 
 Card Deck::draw() {

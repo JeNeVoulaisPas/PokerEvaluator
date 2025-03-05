@@ -97,19 +97,19 @@ CMakeFiles/PokerEvaluator.dir/src/Deck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PokerEvaluator.dir/src/Deck.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/Deck.cpp" -o CMakeFiles/PokerEvaluator.dir/src/Deck.cpp.s
 
-CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o: CMakeFiles/PokerEvaluator.dir/flags.make
-CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o: ../src/Evaluator.cpp
-CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o: CMakeFiles/PokerEvaluator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o -MF CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o.d -o CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o -c "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/Evaluator.cpp"
+CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o: CMakeFiles/PokerEvaluator.dir/flags.make
+CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o: ../src/MonteCarloEvaluator.cpp
+CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o: CMakeFiles/PokerEvaluator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o -MF CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o.d -o CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o -c "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/MonteCarloEvaluator.cpp"
 
-CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/Evaluator.cpp" > CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.i
+CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/MonteCarloEvaluator.cpp" > CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.i
 
-CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/Evaluator.cpp" -o CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.s
+CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/MonteCarloEvaluator.cpp" -o CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.s
 
 CMakeFiles/PokerEvaluator.dir/src/main.cpp.o: CMakeFiles/PokerEvaluator.dir/flags.make
 CMakeFiles/PokerEvaluator.dir/src/main.cpp.o: ../src/main.cpp
@@ -125,23 +125,55 @@ CMakeFiles/PokerEvaluator.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PokerEvaluator.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/main.cpp" -o CMakeFiles/PokerEvaluator.dir/src/main.cpp.s
 
+CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o: CMakeFiles/PokerEvaluator.dir/flags.make
+CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o: ../src/Hand.cpp
+CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o: CMakeFiles/PokerEvaluator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o -MF CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o.d -o CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o -c "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/Hand.cpp"
+
+CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/Hand.cpp" > CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.i
+
+CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/Hand.cpp" -o CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.s
+
+CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o: CMakeFiles/PokerEvaluator.dir/flags.make
+CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o: ../src/MT.cpp
+CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o: CMakeFiles/PokerEvaluator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o -MF CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o.d -o CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o -c "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/MT.cpp"
+
+CMakeFiles/PokerEvaluator.dir/src/MT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PokerEvaluator.dir/src/MT.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/MT.cpp" > CMakeFiles/PokerEvaluator.dir/src/MT.cpp.i
+
+CMakeFiles/PokerEvaluator.dir/src/MT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PokerEvaluator.dir/src/MT.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/src/MT.cpp" -o CMakeFiles/PokerEvaluator.dir/src/MT.cpp.s
+
 # Object files for target PokerEvaluator
 PokerEvaluator_OBJECTS = \
 "CMakeFiles/PokerEvaluator.dir/src/Card.cpp.o" \
 "CMakeFiles/PokerEvaluator.dir/src/Deck.cpp.o" \
-"CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o" \
-"CMakeFiles/PokerEvaluator.dir/src/main.cpp.o"
+"CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o" \
+"CMakeFiles/PokerEvaluator.dir/src/main.cpp.o" \
+"CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o" \
+"CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o"
 
 # External object files for target PokerEvaluator
 PokerEvaluator_EXTERNAL_OBJECTS =
 
 PokerEvaluator: CMakeFiles/PokerEvaluator.dir/src/Card.cpp.o
 PokerEvaluator: CMakeFiles/PokerEvaluator.dir/src/Deck.cpp.o
-PokerEvaluator: CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o
+PokerEvaluator: CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o
 PokerEvaluator: CMakeFiles/PokerEvaluator.dir/src/main.cpp.o
+PokerEvaluator: CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o
+PokerEvaluator: CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o
 PokerEvaluator: CMakeFiles/PokerEvaluator.dir/build.make
 PokerEvaluator: CMakeFiles/PokerEvaluator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable PokerEvaluator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable PokerEvaluator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PokerEvaluator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

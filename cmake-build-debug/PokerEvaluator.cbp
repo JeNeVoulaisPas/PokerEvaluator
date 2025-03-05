@@ -90,7 +90,13 @@
 		<Unit filename="/mnt/c/ISIMA/ZZ3/Algo&amp;Complexite/PokerHandEvaluator/src/Deck.cpp">
 			<Option target="PokerEvaluator"/>
 		</Unit>
-		<Unit filename="/mnt/c/ISIMA/ZZ3/Algo&amp;Complexite/PokerHandEvaluator/src/Evaluator.cpp">
+		<Unit filename="/mnt/c/ISIMA/ZZ3/Algo&amp;Complexite/PokerHandEvaluator/src/Hand.cpp">
+			<Option target="PokerEvaluator"/>
+		</Unit>
+		<Unit filename="/mnt/c/ISIMA/ZZ3/Algo&amp;Complexite/PokerHandEvaluator/src/MT.cpp">
+			<Option target="PokerEvaluator"/>
+		</Unit>
+		<Unit filename="/mnt/c/ISIMA/ZZ3/Algo&amp;Complexite/PokerHandEvaluator/src/MonteCarloEvaluator.cpp">
 			<Option target="PokerEvaluator"/>
 		</Unit>
 		<Unit filename="/mnt/c/ISIMA/ZZ3/Algo&amp;Complexite/PokerHandEvaluator/src/main.cpp">

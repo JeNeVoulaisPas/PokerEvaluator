@@ -13,8 +13,11 @@ include_directories(include)
 set(SOURCES
         src/Card.cpp
         src/Deck.cpp
-        src/Evaluator.cpp
+        src/MonteCarloEvaluator.cpp
         src/main.cpp
+        src/Hand.cpp
+        src/MT.cpp
+        src/MonteCarloEvaluator.cpp
 )
 
 # Ajouter l'exécutable

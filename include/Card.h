@@ -5,16 +5,16 @@
 #ifndef POKERHANDEVALUATOR_CARD_H
 #define POKERHANDEVALUATOR_CARD_H
 
-
 #include <string>
 
-struct Card {
-    std::string rank;
-    std::string suit;
+enum Rank { TWO = 2, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE };
+enum Suit { HEARTS, DIAMONDS, CLUBS, SPADES };
 
-    Card(const std::string& r, const std::string& s);
-    bool operator<(const Card& other) const;
+struct Card {
+    Rank rank;
+    Suit suit;
+
+    std::string toString() const; // Ajout de la méthode toString()
 };
 
-
-#endif //POKERHANDEVALUATOR_CARD_H
+#endif // POKERHANDEVALUATOR_CARD_H

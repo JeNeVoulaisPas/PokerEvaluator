@@ -177,29 +177,77 @@ src/Deck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/Deck.cpp.s
 .PHONY : src/Deck.cpp.s
 
-src/Evaluator.o: src/Evaluator.cpp.o
-.PHONY : src/Evaluator.o
+src/Hand.o: src/Hand.cpp.o
+.PHONY : src/Hand.o
 
 # target to build an object file
-src/Evaluator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.o
-.PHONY : src/Evaluator.cpp.o
+src/Hand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o
+.PHONY : src/Hand.cpp.o
 
-src/Evaluator.i: src/Evaluator.cpp.i
-.PHONY : src/Evaluator.i
+src/Hand.i: src/Hand.cpp.i
+.PHONY : src/Hand.i
 
 # target to preprocess a source file
-src/Evaluator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.i
-.PHONY : src/Evaluator.cpp.i
+src/Hand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.i
+.PHONY : src/Hand.cpp.i
 
-src/Evaluator.s: src/Evaluator.cpp.s
-.PHONY : src/Evaluator.s
+src/Hand.s: src/Hand.cpp.s
+.PHONY : src/Hand.s
 
 # target to generate assembly for a file
-src/Evaluator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/Evaluator.cpp.s
-.PHONY : src/Evaluator.cpp.s
+src/Hand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.s
+.PHONY : src/Hand.cpp.s
+
+src/MT.o: src/MT.cpp.o
+.PHONY : src/MT.o
+
+# target to build an object file
+src/MT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o
+.PHONY : src/MT.cpp.o
+
+src/MT.i: src/MT.cpp.i
+.PHONY : src/MT.i
+
+# target to preprocess a source file
+src/MT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/MT.cpp.i
+.PHONY : src/MT.cpp.i
+
+src/MT.s: src/MT.cpp.s
+.PHONY : src/MT.s
+
+# target to generate assembly for a file
+src/MT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/MT.cpp.s
+.PHONY : src/MT.cpp.s
+
+src/MonteCarloEvaluator.o: src/MonteCarloEvaluator.cpp.o
+.PHONY : src/MonteCarloEvaluator.o
+
+# target to build an object file
+src/MonteCarloEvaluator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o
+.PHONY : src/MonteCarloEvaluator.cpp.o
+
+src/MonteCarloEvaluator.i: src/MonteCarloEvaluator.cpp.i
+.PHONY : src/MonteCarloEvaluator.i
+
+# target to preprocess a source file
+src/MonteCarloEvaluator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.i
+.PHONY : src/MonteCarloEvaluator.cpp.i
+
+src/MonteCarloEvaluator.s: src/MonteCarloEvaluator.cpp.s
+.PHONY : src/MonteCarloEvaluator.s
+
+# target to generate assembly for a file
+src/MonteCarloEvaluator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PokerEvaluator.dir/build.make CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.s
+.PHONY : src/MonteCarloEvaluator.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -240,9 +288,15 @@ help:
 	@echo "... src/Deck.o"
 	@echo "... src/Deck.i"
 	@echo "... src/Deck.s"
-	@echo "... src/Evaluator.o"
-	@echo "... src/Evaluator.i"
-	@echo "... src/Evaluator.s"
+	@echo "... src/Hand.o"
+	@echo "... src/Hand.i"
+	@echo "... src/Hand.s"
+	@echo "... src/MT.o"
+	@echo "... src/MT.i"
+	@echo "... src/MT.s"
+	@echo "... src/MonteCarloEvaluator.o"
+	@echo "... src/MonteCarloEvaluator.i"
+	@echo "... src/MonteCarloEvaluator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

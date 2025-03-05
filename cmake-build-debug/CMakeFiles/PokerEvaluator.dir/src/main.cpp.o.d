@@ -156,21 +156,12 @@ CMakeFiles/PokerEvaluator.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/include/Evaluator.h \
+ /mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/include/MonteCarloEvaluator.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/unordered_map \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h \
+ /usr/include/c++/11/bits/vector.tcc \
  /mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/include/Card.h \
  /mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/include/Deck.h \
- /mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/include/Card.h
+ /mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/include/Hand.h \
+ /mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/include/MT.h

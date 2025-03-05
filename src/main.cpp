@@ -3,17 +3,27 @@
 //
 
 #include <iostream>
-#include "Evaluator.h"
-#include "Card.h"
+#include "MonteCarloEvaluator.h"
+#include "MT.h"
 
 int main() {
-    Evaluator evaluator;
-    std::vector<Card> playerHand = {Card("2", "s"), Card("7", "h")};
-    int numOpponents = 3;
+    init_genrand(4539UL);
+    MonteCarloEvaluator evaluator;
 
-    double winProbability = evaluator.calculateWinProbability(playerHand, numOpponents);
-    std::cout << "Win probability: " << winProbability * 100 << "%" << std::endl;
+    // Main du joueur (exemple : As-Roi)
+    Hand playerHand = { {ACE, HEARTS}, {ACE, CLUBS} };
+
+    int numOpponents;
+    std::cout << "Entrez le nombre d'adversaires : ";
+    std::cin >> numOpponents;
+
+    // Calcul de la force avec Monte-Carlo
+    double handStrength = evaluator.evaluateHandStrength(playerHand, 1000000, numOpponents);
+
+    std::cout << "Probabilité de gagner contre " << numOpponents << " adversaire(s) : "
+              << handStrength * 100 << " %" << std::endl;
 
     return 0;
 }
+
 
