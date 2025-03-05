@@ -18,6 +18,7 @@ private:
     int evaluateHand(const std::vector<Card>& hand);
     Hand dealHand();
     std::vector<Card> dealCommunityCards();
+    void displayCommunityCards(const std::vector<Card>& communityCards);
 };
 
 #endif // POKEREVALUATOR_MONTECARLOEVALUATOR_H

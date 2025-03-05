@@ -8,17 +8,19 @@
 
 int main() {
     init_genrand(4539UL);
+//    int nb_simulations = 1000000;
+    int nb_simulations = 10;
     MonteCarloEvaluator evaluator;
 
     // Main du joueur (exemple : As-Roi)
-    Hand playerHand = { {ACE, HEARTS}, {ACE, CLUBS} };
+    Hand playerHand = { {TWO, HEARTS}, {ACE, CLUBS} };
 
     int numOpponents;
     std::cout << "Entrez le nombre d'adversaires : ";
     std::cin >> numOpponents;
 
     // Calcul de la force avec Monte-Carlo
-    double handStrength = evaluator.evaluateHandStrength(playerHand, 1000000, numOpponents);
+    double handStrength = evaluator.evaluateHandStrength(playerHand, nb_simulations, numOpponents);
 
     std::cout << "Probabilité de gagner contre " << numOpponents << " adversaire(s) : "
               << handStrength * 100 << " %" << std::endl;
