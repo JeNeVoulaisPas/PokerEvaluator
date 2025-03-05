@@ -1,0 +1,3 @@
+/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles/PokerEvaluator.dir
+/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/ISIMA/ZZ3/Algo&Complexite/PokerHandEvaluator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
