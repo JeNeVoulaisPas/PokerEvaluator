@@ -4,6 +4,7 @@
 
 // Constructeur : initialise le deck
 MonteCarloEvaluator::MonteCarloEvaluator() {
+    deck = Deck();
     deck.shuffle();
 }
 
@@ -29,10 +30,11 @@ void MonteCarloEvaluator::displayCommunityCards(const std::vector<Card>& communi
     std::cout << std::endl;
 }
 
-int MonteCarloEvaluator::evaluateHand(const std::vector<Card>& hand) {
+long long MonteCarloEvaluator::evaluateHand(const std::vector<Card>& hand) {
     std::map<int, int> rankCount;
     std::map<Suit, int> suitCount;
     std::vector<int> values;
+
 
     for (const Card& card : hand) {
         rankCount[card.rank]++;
@@ -40,7 +42,9 @@ int MonteCarloEvaluator::evaluateHand(const std::vector<Card>& hand) {
         values.push_back(card.rank);
     }
 
-    std::sort(values.begin(), values.end(), std::greater<int>());
+    std::sort(values.begin(), values.end(), std::greater<>());
+
+
 
     // Vérifier une couleur (Flush)
     bool isFlush = std::any_of(suitCount.begin(), suitCount.end(), [](auto& p) { return p.second >= 5; });
@@ -62,24 +66,23 @@ int MonteCarloEvaluator::evaluateHand(const std::vector<Card>& hand) {
     }
 
     // Vérifier Quinte Flush
-    if (isFlush && isStraight) return 900000 + highestInStraight * 1000;
+    if (isFlush && isStraight) return HANDS_CATEGORY_POINT * 8 + highestInStraight;
 
     // Vérifier Couleur (Flush)
     if (isFlush) {
-        int flushScore = 600000;
-        int weight = 10000;
-        for (int v : values) flushScore += v * weight, weight /= 10;
+        int flushScore = HANDS_CATEGORY_POINT * 5;
+        int weight = HANDS_CATEGORY_POINT / 13;
+        for (int v : values) flushScore += v * weight, weight /= 13;
         return flushScore;
     }
 
     // Vérifier Suite (Straight)
-    if (isStraight) return 500000 + highestInStraight * 1000;
+    if (isStraight) return HANDS_CATEGORY_POINT * 4 + highestInStraight;
 
     // Vérifier Carré, Full House, Brelan, Paires
     int pairs = 0, three = 0, four = 0;
     int highestPair = 0, secondPair = 0, highestThree = 0, highestFour = 0;
     std::vector<int> kickers;
-
     for (auto& p : rankCount) {
         if (p.second == 4) { four++; highestFour = p.first; }
         if (p.second == 3) { three++; highestThree = p.first; }
@@ -94,6 +97,8 @@ int MonteCarloEvaluator::evaluateHand(const std::vector<Card>& hand) {
         }
     }
 
+
+
     // Stocker les cartes restantes (kickers)
     for (int v : values) {
         if (v != highestFour && v != highestThree && v != highestPair && v != secondPair) {
@@ -103,57 +108,47 @@ int MonteCarloEvaluator::evaluateHand(const std::vector<Card>& hand) {
 
     // Vérifier Carré (Four of a Kind)
     if (four) {
-        int score = 800000 + highestFour * 1000;
-        int weight = 100;
-        for (int k : kickers) {
-            score += k * weight;
-            weight /= 10;
-        }
+        int score = HANDS_CATEGORY_POINT * 7 + highestFour * HANDS_CATEGORY_POINT / 28561;
         return score;
     }
 
     // Vérifier Full House
-    if (three && pairs) return 700000 + highestThree * 1000 + highestPair * 100;
+    if (three && pairs) return HANDS_CATEGORY_POINT * 6 + highestThree * HANDS_CATEGORY_POINT / 2197 + highestPair;
 
     // Vérifier Brelan (Three of a Kind)
     if (three) {
-        int score = 400000 + highestThree * 1000;
-        int weight = 100;
+        int score = HANDS_CATEGORY_POINT * 3 + highestThree * HANDS_CATEGORY_POINT / 2197;
+        int weight = 169;
         for (int k : kickers) {
             score += k * weight;
-            weight /= 10;
+            weight /= 13;
         }
         return score;
     }
 
     // Vérifier Double Paire
     if (pairs == 2) {
-        int score = 300000 + highestPair * 1000 + secondPair * 100;
-        int weight = 10;
-        for (int k : kickers) {
-            score += k * weight;
-            weight /= 10;
-        }
+        int score = HANDS_CATEGORY_POINT * 2 + highestPair * HANDS_CATEGORY_POINT / 169 + secondPair * HANDS_CATEGORY_POINT / 28561 + kickers[0];
         return score;
     }
 
     // Vérifier Une Paire (One Pair)
     if (pairs == 1) {
-        int score = 200000 + highestPair * 1000;
-        int weight = 100;
+        int score = HANDS_CATEGORY_POINT + highestPair * HANDS_CATEGORY_POINT / 169;
+        int weight = 2197;
         for (int k : kickers) {
             score += k * weight;
-            weight /= 10;
+            weight /= 13;
         }
         return score;
     }
 
     // Carte Haute (High Card)
-    int score = 100000;
-    int weight = 10000;
+    int score = 0;
+    int weight = 371293;
     for (int k : values) {
         score += k * weight;
-        weight /= 10;
+        weight /= 13;
     }
     return score;
 }
@@ -161,64 +156,69 @@ int MonteCarloEvaluator::evaluateHand(const std::vector<Card>& hand) {
 
 
 // Simulation Monte-Carlo avec plusieurs adversaires
-double MonteCarloEvaluator::evaluateHandStrength(const Hand& playerHand, int numSimulations, int numOpponents) {
+double MonteCarloEvaluator::evaluateHandStrength(const Hand& playerHand, long numSimulations, int numOpponents) {
     int wins = 0, total = 0;
 
-    for (int i = 0; i < numSimulations; i++) {
+    for (long i = 0; i < numSimulations; i++) {
         // Réinitialiser le deck et le mélanger
         deck = Deck();
         deck.shuffle();
 
+
+
         // Retirer les cartes du joueur du deck
         std::vector<Card> filteredDeck;
         for (const auto& card : deck.cards) {
-            if ((card.rank != playerHand.card1.rank || card.suit != playerHand.card1.suit) &&
-                (card.rank != playerHand.card2.rank || card.suit != playerHand.card2.suit)) {
+            if ((card.rank != playerHand.cards[0].rank || card.suit != playerHand.cards[0].suit) &&
+                (card.rank != playerHand.cards[1].rank || card.suit != playerHand.cards[1].suit)) {
                 filteredDeck.push_back(card);
             }
         }
+
         deck.cards = filteredDeck;
 
         // Distribuer les cartes communes
         std::vector<Card> communityCards = dealCommunityCards();
-        displayCommunityCards(communityCards);
+        //displayCommunityCards(communityCards);
 
         // Générer les mains adverses
         std::vector<Hand> opponents;
         for (int j = 0; j < numOpponents; j++) {
             Hand opponentHand = dealHand();
-            opponentHand.display();
+            //opponentHand.display();
             opponents.push_back(opponentHand);
         }
 
+
+
         // Évaluer la main du joueur
         std::vector<Card> playerFullHand = communityCards;
-        playerFullHand.push_back(playerHand.card1);
-        playerFullHand.push_back(playerHand.card2);
+        playerFullHand.push_back(playerHand.cards[0]);
+        playerFullHand.push_back(playerHand.cards[1]);
         int playerScore = evaluateHand(playerFullHand);
 
         // Vérifier si la main du joueur est meilleure que toutes les mains adverses
         bool playerWins = true;
         for (const auto& opponentHand : opponents) {
             std::vector<Card> opponentFullHand = communityCards;
-            opponentFullHand.push_back(opponentHand.card1);
-            opponentFullHand.push_back(opponentHand.card2);
+            opponentFullHand.push_back(opponentHand.cards[0]);
+            opponentFullHand.push_back(opponentHand.cards[1]);
             int opponentScore = evaluateHand(opponentFullHand);
 
             if (opponentScore >= playerScore) {
                 playerWins = false;
-                printf("Opponent wins\n");
-                opponentHand.display();
+                //printf(("Opponent wins\n");
+                //opponentHand.display();
                 break; // Dès qu'un adversaire a une main égale ou meilleure, on arrête
             }
         }
 
         if (playerWins)
         {
-            printf("Player wins\n");
+            //printf("Player wins\n");
             wins++;
         }
-        else printf("Player loses\n");
+        //else printf("Player loses\n");
         total++;
     }
 

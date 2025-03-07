@@ -5,6 +5,8 @@
 #include "Hand.h"
 
 void Hand::display() const {
-    std::cout << "[" << card1.toString() << "] [" << card2.toString() << "]" << std::endl;
+    for (const auto& card : cards) {
+        std::cout << card.toString() << " ";
+    }
 }
 

@@ -8,12 +8,12 @@
 
 int main() {
     init_genrand(4539UL);
-//    int nb_simulations = 1000000;
-    int nb_simulations = 10;
+    long nb_simulations = 100000;
+
     MonteCarloEvaluator evaluator;
 
     // Main du joueur (exemple : As-Roi)
-    Hand playerHand = { {TWO, HEARTS}, {ACE, CLUBS} };
+    Hand playerHand = { {TWO, HEARTS}, {ACE, HEARTS} };
 
     int numOpponents;
     std::cout << "Entrez le nombre d'adversaires : ";

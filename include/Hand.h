@@ -7,12 +7,18 @@
 
 #include <iostream>
 #include "Card.h"
+#include <vector>
 
 struct Hand {
-    Card card1;
-    Card card2;
-
+    std::vector<Card> cards;
     void display() const;
+
+    public:
+
+    Hand(Card card1, Card card2) {
+        cards.push_back(card1);
+        cards.push_back(card2);
+    }
 };
 
 #endif // POKEREVALUATOR_HAND_H
