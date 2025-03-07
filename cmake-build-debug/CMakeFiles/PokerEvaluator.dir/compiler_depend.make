@@ -570,7 +570,12 @@ CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o: ../src/Hand.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../include/Card.h
+  ../include/Card.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc
 
 CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o: ../src/MT.cpp \
   /usr/include/stdc-predef.h \
