@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/PokerEvaluator.dir/src/Card.cpp.o CMakeFiles/PokerEvaluator.dir/src/Deck.cpp.o CMakeFiles/PokerEvaluator.dir/src/MonteCarloEvaluator.cpp.o CMakeFiles/PokerEvaluator.dir/src/main.cpp.o CMakeFiles/PokerEvaluator.dir/src/Hand.cpp.o CMakeFiles/PokerEvaluator.dir/src/MT.cpp.o -o PokerEvaluator 
